@@ -1,0 +1,22 @@
+What is Django?
+---> Django is Python framework used for server side web.
+---> Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+---> Django is a free and open-source web framework, written in Python, which follows the model-template-view architectural pattern.
+---> Django is used to build database-driven websites in Python.
+
+Model
+---> Model is a Python class that subclasses django.db.models.Model.
+---> Each model has a number of class variables, each of which represents a database field in the model.
+---> Model Provides data from dataBase.
+
+View
+---> View is a Python function that takes a Web request and returns a Web response.
+---> This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image . . . or anything, really.
+---> View send data to template.
+
+Template
+---> Template is a file that contains static data as well as placeholders for data that will dynamically change.
+---> Templates are written in a simple markup language.
+
+Urls
+---> Urls is a Python module that maps URLs to views.
