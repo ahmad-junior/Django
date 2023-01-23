@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Fellows{% endblock %}
+{% block content %}
+    <h1>Fellows</h1>
+    <p>Here are the fellows</p>
+    {% for friend in members %}
+        <div class="box">
+        <p><strong>Name: </strong>{{friend.first_name}} {{friend.last_name}}</p>
+        <p><strong>Email: </strong>{{friend.email}}</p>
+        <p><strong>Phone: </strong>{{friend.phone}}</p>
+        <p><strong>Address: </strong>{{friend.address}}</p>
+        <p><strong>City: </strong>{{friend.city}}</p>
+        <p><strong>State: </strong>{{friend.state}}</p>
+        <p><strong>Country: </strong>{{friend.country}}</p>
+        <p><strong>Birth Date: </strong>{{friend.birth_date}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
