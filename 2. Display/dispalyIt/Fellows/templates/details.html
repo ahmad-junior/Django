@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{%block title%}Details about | {{friend.name}} | {{friend.father_name}} {% endblock %}
+{%block content%}
+    <h1>{{friend.name}}</h1>
+    <p><strong>Father Name  : </strong>{{friend.father_name}}</p>
+    <p><strong>Phone Number : </strong>{{friend.phone}}</p>
+    <p><strong>Coutry       : </strong>{{friend.country}}</p>
+    <p><strong>State        : </strong>{{friend.state}}</p>
+    <p><strong>City         : </strong>{{friend.city}}</p>
+    <a class="btn" href="/Fellows">Back</a>
+{%endblock%}

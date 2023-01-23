@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}My Fellows{% endblock %}
+{%block content%}
+    <a class="btn" href="/">Home</a>
+    {% for friend in members %}
+        <div class="box">
+            <h1>{{ friend.name }}</h1>
+            <p><strong>Father Name: </strong>{{ friend.name }}</p>
+            <a class="btn" href="details/{{friend.id}}">More Details</a>
+        </div>
+    {% endfor %}
+{%endblock%}

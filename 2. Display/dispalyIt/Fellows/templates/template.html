@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <a class="btn" href="/">Home</a>
+    {% for fruit in fruits %}
+        <h1>{{ fruit }}</h1>
+    {% endfor %}
+{% endblock %}
