@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Fellows{% endblock %}
+{% block content %}
+    <h1>Fellows</h1>
+    {% comment "This is Tag comments" %}
+    {% endcomment %}
+    {% with myName="Ahmad" %}
+        {% if myName == "Muhammad Ahmad" %}
+        <h1>Hello {{ myName }}, how are you?</h1>
+        {% elif myName == "Ahmad" %}
+        <h1>Hello {{ myName }}, how are you?</h1>
+        {% elif myName == "Muhammad" %}
+        <h1>Hello {{ myName }}, how are you?</h1>
+        {% else %}
+        <h1>Gandu {{ myName }}, Tum hacker Ho?</h1>
+        {% endif %}
+    {% endwith %}
+    <p>Here are the fellows</p>
+    {% for friend in members reversed  %}
+        <div class="box">
+        <h2>{{forloop.counter}}</h2>
+        <p><strong>Name: </strong>{{friend.first_name}} {{friend.last_name}}</p>
+        <p><strong>Email: </strong>{{friend.email}}</p>
+        <p><strong>Phone: </strong>{{friend.phone}}</p>
+        <p><strong>Address: </strong>{{friend.address}}</p>
+        <p><strong>City: </strong>{{friend.city}}</p>
+        <p><strong>State: </strong>{{friend.state}}</p>
+        <p><strong>Country: </strong>{{friend.country}}</p>
+        <p><strong>Birth Date: </strong>{{friend.birth_date}}</p>
+        </div>
+    {% empty %}
+    <h1>Not, any Memember Yet!</h1>
+    {% endfor %}
+{% include "footer.html" with me="Ahmad" sponsor="ahmad-junior" %}
+{% endblock %}
