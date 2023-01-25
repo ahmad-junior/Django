@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fellow in members reversed %}
+            <tr>
+                <td>{{ fellow.id }}</td>
+                <td>{{ fellow.name }}</td>
+                <td>{{ fellow.father_name }}</td>
+                <td>{{ fellow.contact }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No Fellow Found</td>
+            </tr>
+            {% endfor %}
+    </table>
+    <h1>Search ITEM</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">{{item_search}}</th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Contact</th>
+            </tr>
+            <tbody>
+                {% for fellow in search_item %}
+                <tr>
+                    <td>{{ fellow.id }}</td>
+                    <td>{{ fellow.name }}</td>
+                    <td>{{ fellow.father_name }}</td>
+                    <td>{{ fellow.contact }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No Fellow Found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+    <p>We will learn how to search from different methods but now it's hard codded!</p>
+</body>
+</html>
