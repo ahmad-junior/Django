@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Fellows{% endblock %}
+{% block content %}
+    {% for friend in members %}
+    <div class="box">
+        <h1>{{friend.name}}</h1>
+        <p><strong>Father Name : </strong>{{friend.father_name}}</p>
+        <p><strong>Contact : </strong>{{friend.contact}}</p>
+    </div>
+    {% empty %}
+    <h2>Not, have any members yet!</h2>
+    {% endfor %}
+{% endblock %}
